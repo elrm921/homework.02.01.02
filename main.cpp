@@ -25,7 +25,7 @@ std::variant<int, std::string, std::vector<int>> get_variant() {
 }
 
 void print_variant(std::variant<int, std::string, std::vector<int>> &a) {
-    if (std::holds_alternative<int>(a)) std::cout << std::get<int>(a);
+    if (std::holds_alternative<int>(a)) std::cout << std::get<int>(a) * 2;
     if (std::holds_alternative<std::string>(a)) std::cout << std::get<std::string>(a);
     if (std::holds_alternative<std::vector<int>>(a)) std::cout << std::for_each(std::get<std::vector<int>>(a).begin(), std::get<std::vector<int>>(a).end(), [](int &n) {std::cout << n << " ";});
     std::cout << std::endl;
